@@ -1,6 +1,4 @@
-package praticandoJava.pastas.RockPaperScissor.domain;
-
-import praticandoJava.pastas.RockPaperScissor.domain.Item;
+package praticandoJava.pastas.rockPaperScissor.domain;
 
 public class Game {
     private int min = 1;
@@ -34,6 +32,7 @@ public class Game {
             System.out.println("A máquina pontuou!");
 
         }
+
         if (playerNumChoise == Item.PAPER && item == Item.ROCK) {
             System.out.println("Ponto para o jogador!!");
 
@@ -41,6 +40,7 @@ public class Game {
             System.out.println("A máquina pontuou!");
 
         }
+
         if (playerNumChoise == Item.SCISSOR && item == Item.PAPER) {
             System.out.println("Ponto para o jogador!!");
 

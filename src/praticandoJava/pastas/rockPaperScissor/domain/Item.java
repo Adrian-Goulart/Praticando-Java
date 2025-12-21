@@ -1,4 +1,4 @@
-package praticandoJava.pastas.RockPaperScissor.domain;
+package praticandoJava.pastas.rockPaperScissor.domain;
 
 public enum Item {
     ROCK(1),
