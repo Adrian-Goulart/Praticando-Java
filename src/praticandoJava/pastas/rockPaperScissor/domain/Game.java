@@ -7,44 +7,46 @@ public class Game {
     private int random = (int) ((range * Math.random()) + min);
     Item item = Item.typeItem(random);
 
-    public static Item playerNumChoise;
+    public static Item playerChoise;
 
-    public Game(Item playerNumChoise) {
-        this.playerNumChoise = playerNumChoise;
+    public Game(Item playerChoise) {
+        this.playerChoise = playerChoise;
     }
 
     public void Play() {
-        System.out.println("Escolha do jogador: " + playerNumChoise);
+
+
+        System.out.println("Escolha do jogador: " + playerChoise);
         System.out.println("Escolha da máquina: " + item);
 
         GameResult();
     }
 
     public void GameResult() {
-        if (playerNumChoise == item) {
+        if (playerChoise == item) {
             System.out.println("Empate!!");
         }
 
-        if (playerNumChoise == Item.ROCK && item == Item.SCISSOR) {
+        if (playerChoise == Item.ROCK && item == Item.SCISSOR) {
             System.out.println("Ponto para o jogador!!");
 
-        } else if (playerNumChoise == Item.ROCK && item == Item.PAPER) {
+        } else if (playerChoise == Item.ROCK && item == Item.PAPER) {
             System.out.println("A máquina pontuou!");
 
         }
 
-        if (playerNumChoise == Item.PAPER && item == Item.ROCK) {
+        if (playerChoise == Item.PAPER && item == Item.ROCK) {
             System.out.println("Ponto para o jogador!!");
 
-        } else if (playerNumChoise == Item.PAPER && item == Item.SCISSOR) {
+        } else if (playerChoise == Item.PAPER && item == Item.SCISSOR) {
             System.out.println("A máquina pontuou!");
 
         }
 
-        if (playerNumChoise == Item.SCISSOR && item == Item.PAPER) {
+        if (playerChoise == Item.SCISSOR && item == Item.PAPER) {
             System.out.println("Ponto para o jogador!!");
 
-        } else if (playerNumChoise == Item.SCISSOR && item == Item.ROCK) {
+        } else if (playerChoise == Item.SCISSOR && item == Item.ROCK) {
             System.out.println("A máquina pontuou!");
 
         }
