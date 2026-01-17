@@ -1,7 +1,7 @@
-package praticandoJava.aula.exception.test;
+package praticandoJava.aula.Aexception.test;
 
-import praticandoJava.aula.exception.dominio.Leitor1;
-import praticandoJava.aula.exception.dominio.Leitor2;
+import praticandoJava.aula.Aexception.dominio.Leitor1;
+import praticandoJava.aula.Aexception.dominio.Leitor2;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package praticandoJava.aula.exception.dominio;
+package praticandoJava.aula.Aexception.dominio;
 
 public class LoginInvalidoException extends Exception {
     public LoginInvalidoException() {

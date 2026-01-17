@@ -1,8 +1,8 @@
-package praticandoJava.aula.exception.test;
+package praticandoJava.aula.Aexception.test;
 
-import praticandoJava.aula.exception.dominio.Funcionario;
-import praticandoJava.aula.exception.dominio.LoginInvalidoException;
-import praticandoJava.aula.exception.dominio.Pessoa;
+import praticandoJava.aula.Aexception.dominio.Funcionario;
+import praticandoJava.aula.Aexception.dominio.LoginInvalidoException;
+import praticandoJava.aula.Aexception.dominio.Pessoa;
 
 import java.io.FileNotFoundException;
 

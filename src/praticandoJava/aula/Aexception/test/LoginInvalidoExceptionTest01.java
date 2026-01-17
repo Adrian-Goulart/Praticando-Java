@@ -1,6 +1,6 @@
-package praticandoJava.aula.exception.test;
+package praticandoJava.aula.Aexception.test;
 
-import praticandoJava.aula.exception.dominio.LoginInvalidoException;
+import praticandoJava.aula.Aexception.dominio.LoginInvalidoException;
 
 import java.util.Scanner;
 

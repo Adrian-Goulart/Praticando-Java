@@ -1,4 +1,4 @@
-package praticandoJava.aula.exception.dominio;
+package praticandoJava.aula.Aexception.dominio;
 
 import java.io.FileNotFoundException;
 
