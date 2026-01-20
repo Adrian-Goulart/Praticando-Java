@@ -2,8 +2,6 @@ package praticandoJava.pastas.bankTranference.domain;
 
 import praticandoJava.pastas.bankTranference.exceptions.InvalidValueException;
 import praticandoJava.pastas.bankTranference.exceptions.UltrapassedValueException;
-
-import java.security.InvalidAlgorithmParameterException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
