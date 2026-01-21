@@ -1,4 +1,4 @@
-package praticandoJava.testes.wrapper;
+package praticandoJava.aula.Bwrappers.test;
 
 public class WrapperTest {
     public static void main(String[] args) {
