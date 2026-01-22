@@ -1,4 +1,4 @@
-package praticandoJava.aula.Elocale.test;
+package praticandoJava.aula.Eformatação.test;
 
 import java.text.DateFormat;
 import java.util.Calendar;
