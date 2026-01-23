@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class NumberFormatTest02 {
     public static void main(String[] args) {
-        Locale localeBrazil = new Locale("pt", "br");
+//        Locale localeBrazil = new Locale("pt", "br");
         Locale localeJapan = Locale.JAPAN;
         NumberFormat[] nf = new NumberFormat[1];
 
