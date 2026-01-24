@@ -1,18 +1,18 @@
 package praticandoJava.aula.Ddates;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Month;
+import java.time.temporal.ChronoField;
 import java.util.Calendar;
 import java.util.Date;
 
 public class LocalDatesTest01 {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.now();
-        System.out.println("Dia semana: " + date.getDayOfWeek());
-        System.out.println("Dia mês: " + date.getDayOfMonth());
-        System.out.println("Mês: " + date.getMonth());
-        System.out.println("Ano: " + date.getYear());
-        System.out.println("Tamanho mês: " + date.lengthOfMonth());
-        System.out.println("Bissexto: " + date.isLeapYear());
+        LocalTime time = LocalTime.of(16, 5, 30);
+
+        System.out.println("Segundos dia: " + time.get(ChronoField.SECOND_OF_DAY));
+        System.out.println("Minuto dia: " + time.get(ChronoField.MINUTE_OF_DAY));
+        System.out.println("Horas dia: " + time.get(ChronoField.HOUR_OF_DAY));
     }
 }
