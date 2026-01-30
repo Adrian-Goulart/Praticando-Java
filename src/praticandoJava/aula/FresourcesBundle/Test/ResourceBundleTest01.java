@@ -23,4 +23,4 @@ public class ResourceBundleTest01 {
 // messages_ja.properties
 // messages_pt_BR.properties
 // messages_pt.properties
-// messages
+// messages.properties
