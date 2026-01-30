@@ -3,7 +3,7 @@ package praticandoJava.aula.Gregex.test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PatternMatcherTest03 {
+public class PatternMatcherTest04 {
     public static void main(String[] args) {
 
         // \d --> Todos os dígitos
@@ -13,9 +13,16 @@ public class PatternMatcherTest03 {
         // \w --> a-z A-Z, dígitos e _
         // \W --> Tudo que não pertence ao \w
         // []
+        // ? zero ou uma
+        // * Zero ou mais
+        // + uma ou mais
+        // {x, y} de x até y
+        // () Agrupamento
+        // | OU
+        // $ "Fim de linha"
 
-        String regex = "0[xX][\\w]";
-        String texto = "12 0x 0X 0xFFABC 0x109 0x1";
+        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
+        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto:  " + texto);
