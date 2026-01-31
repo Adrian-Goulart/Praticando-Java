@@ -21,18 +21,21 @@ public class PatternMatcherTest04 {
         // | OU
         // $ "Fim de linha"
         // . Caractere coringa Ex. 1.6 --> 1a3, 143, 1%3, 1\3
+        // ^
 
         String regex = "([a-zA-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-Z]+))+";
         String texto = "nezukokamado@hotmail.com, 16killuazoldyck@gmail.com, !$@kageyama@mail.br, senku@gmail.com.br, hinata@mail";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(texto);
-        System.out.println("Texto:  " + texto);
-        System.out.println("Índice: 0123456789");
-        System.out.println("Regex: " + regex);
-        System.out.println("Posições encontradas:");
+        System.out.println("!$@kageyama@mail.br".matches(regex));
+        System.out.println(texto.split(",")[1].trim());
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(texto);
+            System.out.println("Texto:  " + texto);
+            System.out.println("Índice: 0123456789");
+            System.out.println("Regex: " + regex);
+            System.out.println("Posições encontradas:");
 
-        while (matcher.find()) {
-            System.out.println(matcher.start() + " " + matcher.group());
-        }
+            while (matcher.find()) {
+                System.out.println(matcher.start() + " " + matcher.group());
+            }
     }
 }
