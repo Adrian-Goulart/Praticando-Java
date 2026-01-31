@@ -13,16 +13,17 @@ public class PatternMatcherTest04 {
         // \w --> a-z A-Z, dígitos e _
         // \W --> Tudo que não pertence ao \w
         // []
-        // ? zero ou uma
+        // ? Zero ou uma
         // * Zero ou mais
         // + uma ou mais
         // {x, y} de x até y
         // () Agrupamento
         // | OU
         // $ "Fim de linha"
+        // . Caractere coringa Ex. 1.6 --> 1a3, 143, 1%3, 1\3
 
-        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
-        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
+        String regex = "([a-zA-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-Z]+))+";
+        String texto = "nezukokamado@hotmail.com, 16killuazoldyck@gmail.com, !$@kageyama@mail.br, senku@gmail.com.br, hinata@mail";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto:  " + texto);
