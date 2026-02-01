@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileWritterTest01  {
+public class FileWriterTest01 {
     public static void main(String[] args) {
         File file = new File("file.txt");
 
