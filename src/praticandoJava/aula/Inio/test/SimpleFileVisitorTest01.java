@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
-class ListAllFiles extends SimpleFileVisitor<Path> {
+class ListJavaFiles extends SimpleFileVisitor<Path> {
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
         if (file.getFileName().toString().endsWith(".java")) {
@@ -16,9 +16,8 @@ class ListAllFiles extends SimpleFileVisitor<Path> {
 
 public class SimpleFileVisitorTest01 {
     public static void main(String[] args) throws IOException {
-        Path end = Paths.get(".java");
         Path root = Paths.get("src/praticandoJava/aula/");
-        Files.walkFileTree(root, new ListAllFiles());
+        Files.walkFileTree(root, new ListJavaFiles());
 
     }
 }
