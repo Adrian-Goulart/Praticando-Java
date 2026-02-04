@@ -4,17 +4,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.attribute.BasicFileAttributeView;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.DosFileAttributeView;
 import java.nio.file.attribute.DosFileAttributes;
 
-public class DosFileattributeTest01 {
+public class DosFileAttributeTest01 {
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("pasta/subpasta/text.txt");
         if (Files.notExists(path)) Files.createFile(path);
 
-        // Não funcionou
 //        Files.setAttribute(path, "dos:hidden", true);
 //        Files.setAttribute(path, "dos:readonly", true);
 
