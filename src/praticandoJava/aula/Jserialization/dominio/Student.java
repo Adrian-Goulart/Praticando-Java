@@ -1,11 +1,12 @@
 package praticandoJava.aula.Jserialization.dominio;
 
-import java.io.Serializable;
+import java.io.*;
 
 public class Student implements Serializable {
     private int id;
     private String name;
-    private String password;
+    private transient String password;
+    transient StudentClass studentClass;
 
     public Student(int id, String name, String password) {
         this.id = id;
@@ -19,7 +20,40 @@ public class Student implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", student class='" + studentClass + '\'' +
                 '}';
+    }
+    @Serial
+    private void writeObject(ObjectOutputStream oos) {
+        try {
+            // Primeiro, forma padão
+            oos.defaultWriteObject();
+            // O que não faz parte, pegar atributos
+            oos.writeUTF(studentClass.getName());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @Serial
+    private void readObject(ObjectInputStream ois) {
+        try {
+            ois.defaultReadObject();
+            String className = ois.readUTF();
+            studentClass = new StudentClass(className);
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public StudentClass getStudentClass() {
+        return studentClass;
+    }
+
+    public void setStudentClass(StudentClass studentClass) {
+        this.studentClass = studentClass;
     }
 
     public int getId() {

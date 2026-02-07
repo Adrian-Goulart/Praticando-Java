@@ -1,6 +1,7 @@
 package praticandoJava.aula.Jserialization.test;
 
 import praticandoJava.aula.Jserialization.dominio.Student;
+import praticandoJava.aula.Jserialization.dominio.StudentClass;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -9,6 +10,8 @@ import java.nio.file.Paths;
 public class SerializacaoTest01 {
     public static void main(String[] args) {
         Student student = new Student(01, "Adrian", "senha-Secreta");
+        StudentClass studentClass = new StudentClass("Classe AB");
+        student.setStudentClass(studentClass);
         serializer(student);
         deserializer();
     }
