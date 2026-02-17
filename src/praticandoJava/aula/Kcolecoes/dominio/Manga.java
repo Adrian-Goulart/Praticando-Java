@@ -1,15 +1,15 @@
-package praticandoJava.aula.Kcolecoes.test;
+package praticandoJava.aula.Kcolecoes.dominio;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga> {
     private Long id;
     private String name;
     private double priece;
 
     public Manga(Long id, String name, double priece) {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(id, "Id não pode ser null");
+        Objects.requireNonNull(name, "Name não poode ser null");
         this.id = id;
         this.name = name;
         this.priece = priece;
@@ -58,5 +58,24 @@ public class Manga {
 
     public void setPriece(double priece) {
         this.priece = priece;
+    }
+
+//  Negativo se o `this` < `manga`
+//  Se `this` == `manga`, return 0
+//  Positivo se `this` > `manga`
+
+    @Override
+    public int compareTo(Manga manga) {
+//        if (this.id < manga.getId()) {
+//            return -1;
+//        } else if (this.id.equals(manga.getId())) {
+//            return 0;
+//        } else {
+//            return 1;
+//        }
+
+//        return this.id.compareTo(manga.getId());
+//        return this.name.compareTo(manga.name);
+        return Double.compare(priece, manga.getPriece());
     }
 }
