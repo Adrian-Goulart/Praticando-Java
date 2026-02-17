@@ -4,7 +4,15 @@ import praticandoJava.aula.Kcolecoes.dominio.Manga;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+class MangaByIdComparator implements Comparator<Manga> {
+    @Override
+    public int compare(Manga manga1, Manga manga2) {
+        return manga1.getId().compareTo(manga2.getId());
+    }
+}
 
 public class MangaSortTest01 {
     public static void main(String[] args) {
@@ -18,7 +26,11 @@ public class MangaSortTest01 {
         System.out.println(mangas);
 
         Collections.sort(mangas);
-        System.out.println("Com ordenação");
+        System.out.println("Com ordenação por Comparable");
+        System.out.println(mangas);
+
+        Collections.sort(mangas, new MangaByIdComparator()); // mangas.sort(new MangaByIdComparator());
+        System.out.println("Com ordenação por Comparator");
         System.out.println(mangas);
     }
 }
