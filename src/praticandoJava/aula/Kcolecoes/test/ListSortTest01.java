@@ -7,7 +7,7 @@ import java.util.List;
 public class ListSortTest01 {
     public static void main(String[] args) {
         List<String> mangas = new ArrayList<>();
-        mangas.add("Kimetsu no yaiba");
+        mangas.add("Kimetsu no Yaiba");
         mangas.add("Sousou no Frieren");
         mangas.add("Tongari Boushi no Atelier");
         mangas.add("Yu Yu Hakusho");

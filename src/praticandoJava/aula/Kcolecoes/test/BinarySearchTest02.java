@@ -10,7 +10,7 @@ public class BinarySearchTest02 {
     public static void main(String[] args) {
         MangaByIdComparator mangaByIdComparator = new MangaByIdComparator();
         List<Manga> mangas = new ArrayList<>();
-        mangas.add(new Manga(13579L, "Kimetsu no yaiba", 49.90));
+        mangas.add(new Manga(13579L, "Kimetsu no Yaiba", 49.90));
         mangas.add(new Manga(24680L, "Sousou no Frieren", 49.90));
         mangas.add(new Manga(86420L, "Tongari Boushi no Atelier", 39.90));
         mangas.add(new Manga(97531L, "Yu Yu Hakusho", 54.90));
