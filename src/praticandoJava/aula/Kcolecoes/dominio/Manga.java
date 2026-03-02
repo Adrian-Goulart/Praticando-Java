@@ -5,19 +5,19 @@ import java.util.Objects;
 public class Manga implements Comparable<Manga> {
     private Long id;
     private String name;
-    private double priece;
+    private double price;
     private int quantity;
 
-    public Manga(Long id, String name, double priece) {
+    public Manga(Long id, String name, double price) {
         Objects.requireNonNull(id, "Id não pode ser null");
         Objects.requireNonNull(name, "Name não poode ser null");
         this.id = id;
         this.name = name;
-        this.priece = priece;
+        this.price = price;
     }
 
-    public Manga(Long id, String name, double priece, int quantity) {
-        this(id, name, priece);
+    public Manga(Long id, String name, double price, int quantity) {
+        this(id, name, price);
         this.quantity = quantity;
     }
 
@@ -38,7 +38,7 @@ public class Manga implements Comparable<Manga> {
         return "Manga{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", priece=" + priece +
+                ", price=" + price +
                 ", quantity=" + quantity +
                 '}';
     }
@@ -67,12 +67,12 @@ public class Manga implements Comparable<Manga> {
         this.name = name;
     }
 
-    public double getPriece() {
-        return priece;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPriece(double priece) {
-        this.priece = priece;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
 //  Negativo se o `this` < `manga`
@@ -91,6 +91,6 @@ public class Manga implements Comparable<Manga> {
 
 //        return this.id.compareTo(manga.getId());
         return this.name.compareTo(manga.name);
-//        return Double.compare(priece, manga.getPriece());
+//        return Double.compare(price, manga.getPrice());
     }
 }
