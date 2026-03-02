@@ -9,7 +9,7 @@ import java.util.Set;
 public class SetTest01 {
     public static void main(String[] args) {
         Set<Manga> mangas = new LinkedHashSet<>();
-        mangas.add(new Manga(13579L, "Kimetsu no yaiba", 49.90, 8));
+        mangas.add(new Manga(13579L, "Kimetsu no Yaiba", 49.90, 8));
         mangas.add(new Manga(24680L, "Sousou no Frieren", 49.90, 0));
         mangas.add(new Manga(86420L, "Tongari Boushi no Atelier", 39.90, 0));
         mangas.add(new Manga(97531L, "Yu Yu Hakusho", 54.90, 11));
