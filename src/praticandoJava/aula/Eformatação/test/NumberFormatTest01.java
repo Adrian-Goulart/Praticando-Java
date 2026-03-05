@@ -13,7 +13,7 @@ public class NumberFormatTest01 {
 
         nf[0] = NumberFormat.getInstance(localeBrazil);
         nf[1] = NumberFormat.getInstance(localeJapan);
-        nf[2] = NumberFormat.getInstance(Locale.KOREA);
+        nf[2] = NumberFormat.getInstance(Locale.FRANCE);
 
         float value = 3421831.54F;
         for (NumberFormat numberFormat : nf) {
